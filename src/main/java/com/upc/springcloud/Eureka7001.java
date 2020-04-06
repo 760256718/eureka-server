@@ -14,8 +14,11 @@ public class Eureka7001 {
 	public void test1() {
 		System.out.println("这是第一次修改");
 	}
+	public void test2() {
+		System.out.println("master的第二次修改");
+	}
 	
-	public void hotMethod() {
-		System.out.println("这是hot_fix分支修改的");
+	public void test3() {
+		System.out.println("这是temp的第一次修改");
 	}
 }
