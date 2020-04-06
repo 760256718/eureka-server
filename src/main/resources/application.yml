@@ -1,0 +1,19 @@
+#配置EurekaServer
+#配置当前服务端口为7001
+server:
+  port: 7001
+#详细设置EurekaServer
+eureka:
+  instance:
+    hostname: eureka7001  #eureka服务器的实例名称
+  client:
+    register-with-eureka: false  #表示不向注册中心注册自己
+    fetch-registry: false        #表示自己端急速注册中心，也不需要检索服务
+    service-url:
+      #设置注册中心的地址，以便进行服务注册和服务查询
+      #将当前注册中心注册到另一个注册中心中，实现相互注册
+      defaultZone: http://eureka7001.com:7001/eureka/
+  server:
+    enable-self-preservation: false  #关闭自我保护
+    eviction-interval-timer-in-ms: 2000   #服务掉线两秒直接提出
+logging:  level:    com.netflix: warn
